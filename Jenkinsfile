@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'make publish'
+                pdrone artifacts: 'hello_exec'
             }
         }
     }
