@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Test'){
             steps {
-                sh './hello_exec'
+                sh 'make test'
             }
         }
         stage('Deploy') {
             steps {
-                pdrone artifacts: 'hello_exec'
+                pdrone artifacts: 'hello_exec', serverUrl: '', channel: '', credentialsId: ''
             }
         }
     }
