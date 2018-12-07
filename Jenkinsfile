@@ -1,7 +1,7 @@
 pipeline { 
     agent any
     environment {
-        def DIFF = sh(returnStdout: true, script: './compare')
+        def DIFF = sh(returnStdout: true, script: './compare.sh')
     }
     stages {
         stage('Compare') {
