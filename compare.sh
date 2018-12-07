@@ -1,7 +1,9 @@
 #!/bin/bash
-DIFF=$(git diff master)
-if [ "$DIFF" == "" ]; then
-        echo "equal";
-else
-        echo "not equal";
-fi
+BR=$(git branch)
+echo "$BR"
+#DIFF=$(git diff origin master)
+#if [ "$DIFF" == "" ]; then
+#        echo "equal";
+#else
+#        echo "not equal";
+#fi

@@ -1,10 +1,13 @@
 pipeline { 
     agent any
-
+    environment {
+        def BR = sh(returnStdout: true, script: 'git log --oneline')
+        def DIFF = sh(returnStdout: true, script: './compare.sh')
+    }
     stages {
         stage('Compare') {
             steps {
-                DIFF = sh(returnStdout: true, script: './compare')
+                echo "br = ${BR}"
                 echo "diff = ${DIFF}"
             }
         }
