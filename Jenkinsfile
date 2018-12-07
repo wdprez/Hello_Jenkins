@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Compare') {
             steps {
-                DIFF = sh(returnStdout: true, script: './compare')
+                def DIFF = sh(returnStdout: true, script: './compare')
                 echo "diff = ${DIFF}"
             }
         }
