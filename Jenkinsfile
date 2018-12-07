@@ -3,10 +3,10 @@ pipeline {
 
     stages {
         stage('Compare') {
-            script {
+            steps {
                 DIFF = sh(returnStdout: true, script: './compare')
+                echo "diff = ${DIFF}"
             }
-            echo "diff = ${DIFF}"
         }
         stage('Build') { 
             when {
