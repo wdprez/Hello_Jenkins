@@ -1,5 +1,5 @@
 #!/bin/bash
-git brach
+git branch
 DIFF=$(git diff origin master)
 if [ "$DIFF" == "" ]; then
         echo "equal";
