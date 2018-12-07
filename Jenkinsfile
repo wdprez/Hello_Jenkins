@@ -1,7 +1,7 @@
 pipeline { 
     agent any
     environment {
-        def BR = sh(returnStdout: true, script: 'git status')
+        def BR = sh(returnStdout: true, script: 'git branch')
         def DIFF = sh(returnStdout: true, script: './compare.sh')
     }
     stages {
