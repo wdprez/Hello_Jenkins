@@ -1,5 +1,5 @@
 #!/bin/bash
-DIFF=$(git diff master)
+DIFF=$(git diff origin master)
 if [ "$DIFF" == "" ]; then
         echo "equal";
 else
