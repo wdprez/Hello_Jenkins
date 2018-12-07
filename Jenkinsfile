@@ -1,10 +1,11 @@
 pipeline { 
     agent any
-
+    environment {
+        def DIFF = sh(returnStdout: true, script: './compare')
+    }
     stages {
         stage('Compare') {
             steps {
-                def DIFF = sh(returnStdout: true, script: './compare')
                 echo "diff = ${DIFF}"
             }
         }
