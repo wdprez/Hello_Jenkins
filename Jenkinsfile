@@ -1,5 +1,5 @@
 pipeline { 
-    agent { label 'my-defined-label' }
+    agent { label 'cpp' }
     environment {
         def BR = sh(returnStdout: true, script: 'git log --oneline')
         def DIFF = sh(returnStdout: true, script: './compare.sh')
